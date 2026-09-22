@@ -48,6 +48,19 @@ uv run ruff format --check approval_gate.py
 uv run mypy --strict approval_gate.py
 ```
 
+## Certification run
+
+One check decides whether the gate holds. `check_gate.sh` runs the script with `APPROVE=y` and
+`APPROVE=n` against Bedrock and asserts on the printed trace: exactly one `TOOL EXECUTED` line in
+the approved run, none in the denied run, and `FINAL   stop_reason=end_turn` in both. It prints
+PASS or FAIL per assertion and exits non-zero on any FAIL.
+
+```bash
+./check_gate.sh
+```
+
+The two runs behind the blog post are in [TRACES.md](TRACES.md), pasted as printed.
+
 ## Links
 
 - [Strands Agents interrupts](https://strandsagents.com/docs/user-guide/sdk/interrupts/)
