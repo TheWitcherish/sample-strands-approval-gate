@@ -66,3 +66,4 @@ The two runs behind the blog post are in [TRACES.md](TRACES.md), pasted as print
 - [Strands Agents interrupts](https://strandsagents.com/docs/user-guide/sdk/interrupts/)
 - [Strands Agents hooks](https://strandsagents.com/docs/user-guide/sdk/agents/hooks/)
 - [Hook events](https://strandsagents.com/docs/user-guide/sdk/agents/hooks-events/)
+- NOTES.md: the deep dive (typing corrections, limits, the AfterToolsEvent edge, what the traces showed)
