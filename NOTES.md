@@ -51,7 +51,7 @@ for one message. Keep each side effect at the boundary that owns it: per tool in
    (`225d3982-9eb3-5ce9-93ca-f09a444307f7` in both traces) is byte-identical across separate
    processes, so it derives from the interrupt name rather than randomness. Key an approval
    queue on the whole id; the tail alone collides when two calls to the same tool are pending.
-3. A `None` response re-raises the interrupt. In `strands/interrupt.py`, `interrupt()` returns
+3. A `None` response re-raises the interrupt. In `strands/types/interrupt.py`, `interrupt()` returns
    the stored response only when it is not `None`, so a literal `null` from an approval UI never
    reaches the hook's check: the same interrupt rises again on resume and the caller's `while`
    loop spins. Deny with an explicit string, never with nothing.
