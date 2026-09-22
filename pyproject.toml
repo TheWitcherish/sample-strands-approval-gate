@@ -1,0 +1,15 @@
+[project]
+name = "sample-strands-approval-gate"
+version = "0.1.0"
+description = "Sample: a Strands Agents before-tool hook that gates a destructive tool on human approval"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "strands-agents==1.56.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1",
+    "ruff>=0.16.8",
+]
