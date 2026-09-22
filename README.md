@@ -1,5 +1,7 @@
 # sample-strands-approval-gate
 
+![Gate the Tool, Not the Prompt: Strands Approval Hooks (With Traces)](docs/banner.png)
+
 This is a sample for experiments, not production code. It accompanies the blog post
 "Gate the Tool, Not the Prompt: Strands Approval Hooks (With Traces)" and shows one thing:
 a before-tool hook in Strands Agents that pauses the agent with an interrupt until a human
