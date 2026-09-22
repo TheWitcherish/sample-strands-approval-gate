@@ -20,8 +20,11 @@ GATED_TOOL: Final[str] = "delete_files"
 INTERRUPT_NAME: Final[str] = "approval"
 # Cross-region inference profile, checked with
 # `aws bedrock list-inference-profiles` right before the run.
-MODEL_ID: Final[str] = "eu.anthropic.claude-sonnet-4-5-20250929-v1:0"
-REGION: Final[str] = "eu-central-1"
+# Override with: export MODEL_ID=YOUR_MODEL  export AWS_REGION=YOUR_AWS_REGION
+DEFAULT_MODEL_ID: Final[str] = "eu.anthropic.claude-sonnet-5"
+DEFAULT_AWS_REGION: Final[str] = "eu-central-1"
+MODEL_ID: Final[str] = os.environ.get("MODEL_ID", DEFAULT_MODEL_ID)
+REGION: Final[str] = os.environ.get("AWS_REGION", DEFAULT_AWS_REGION)
 AFFIRMATIVE: Final[frozenset[str]] = frozenset({"y", "yes"})
 
 

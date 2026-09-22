@@ -27,9 +27,12 @@ aws bedrock list-inference-profiles --region eu-central-1 \
   --query 'inferenceProfileSummaries[].inferenceProfileId' --output text
 ```
 
-Edit `MODEL_ID` and `REGION` in `approval_gate.py` if yours differ, then:
+The script defaults to `eu.anthropic.claude-sonnet-5` in `eu-central-1`. Point it at your own
+verified profile and region with environment variables, then run:
 
 ```bash
+export MODEL_ID=YOUR_MODEL
+export AWS_REGION=YOUR_AWS_REGION
 uv sync
 APPROVE=y uv run python approval_gate.py   # tool runs once
 APPROVE=n uv run python approval_gate.py   # tool never runs
