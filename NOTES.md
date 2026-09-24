@@ -1,8 +1,9 @@
 # Notes: the deep dive behind the post
 
-The blog post keeps the story; this file keeps the detail that did not need to be in it.
-Everything below came from running `approval_gate.py` against the real SDK and reading the
-traces in [TRACES.md](TRACES.md).
+The blog post keeps the story; this file keeps the detail that did not need to be in it: the
+typing corrections, the limits, the `AfterToolsEvent` edge, and the two bets the post cut (the
+cycle-count tie and the interrupt id shape). Everything below came from running
+`approval_gate.py` against the real SDK and reading the traces in [TRACES.md](TRACES.md).
 
 ## Four typing corrections found by running the code
 
